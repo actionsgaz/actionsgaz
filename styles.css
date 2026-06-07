@@ -6860,6 +6860,20 @@ textarea:focus {
   opacity: 0.88;
 }
 
+#services .services-card-secondary .services-card-media {
+  width: calc(100% + clamp(44px, 5.4vw, 68px));
+  margin: 14px calc(clamp(22px, 2.7vw, 34px) * -1) 18px;
+  aspect-ratio: 16 / 8;
+}
+
+#services .services-card-media-heating img {
+  object-position: 76% center;
+}
+
+#services .services-card-media-plumbing img {
+  object-position: 18% center;
+}
+
 #services .services-card-top {
   display: flex;
   align-items: center;
@@ -7144,6 +7158,21 @@ textarea:focus {
     opacity: 1;
   }
 
+  #services .services-card-secondary .services-card-media {
+    width: calc(100% + 44px);
+    margin: 16px -22px 18px;
+    min-height: 170px;
+    aspect-ratio: 16 / 10;
+  }
+
+  #services .services-card-media-heating img {
+    object-position: 78% center;
+  }
+
+  #services .services-card-media-plumbing img {
+    object-position: 20% center;
+  }
+
   #services .services-card {
     padding: 22px;
     border-radius: 14px;
@@ -7170,5 +7199,300 @@ textarea:focus {
   #services .services-cta-actions,
   #services .services-cta-actions .btn {
     width: 100%;
+  }
+}
+
+@media (max-width: 680px) {
+  .mobile-call {
+    right: 18px;
+    bottom: 18px;
+    left: auto;
+    display: inline-flex;
+    width: 54px;
+    min-width: 54px;
+    height: 54px;
+    min-height: 54px;
+    padding: 0;
+    overflow: hidden;
+    border-radius: 50%;
+    font-size: 0;
+  }
+
+  .mobile-call .icon {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+@media (max-width: 680px) {
+  .hero {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: 100svh;
+    min-height: 100dvh;
+    gap: 16px;
+    padding:
+      clamp(84px, 12svh, 108px)
+      16px
+      max(84px, calc(env(safe-area-inset-bottom) + 72px));
+    justify-content: center;
+    background-position: 78% center;
+  }
+
+  .hero-copy {
+    flex: 0 1 auto;
+    width: 100%;
+    max-width: 100%;
+    transform: none;
+  }
+
+  .hero h1 {
+    max-width: 14.5ch;
+    margin-bottom: 20px;
+    font-size: clamp(2rem, 9.6vw, 2.72rem);
+  }
+
+  .hero-actions {
+    width: 100%;
+    margin-bottom: 0;
+  }
+
+  .hero .btn-primary {
+    width: 100%;
+  }
+
+  .hero-panel {
+    flex: 0 0 auto;
+    width: min(100%, 360px);
+    max-width: 360px;
+    margin: 0;
+    padding: 14px;
+  }
+
+  .hero-panel a {
+    font-size: clamp(1.18rem, 6vw, 1.42rem);
+  }
+}
+
+@media (max-width: 680px) and (max-height: 700px) {
+  .hero {
+    gap: 12px;
+    padding-top: 76px;
+  }
+
+  .hero h1 {
+    margin-bottom: 16px;
+    font-size: clamp(1.86rem, 8.8vw, 2.34rem);
+  }
+
+  .hero-panel {
+    display: none;
+  }
+}
+
+#services .services-head {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+@media (max-width: 680px) {
+  #services .services-showcase {
+    display: flex;
+    gap: 14px;
+    width: calc(100% + 28px);
+    margin-inline: -14px;
+    padding: 0 14px 12px;
+    overflow-x: auto;
+    overflow-y: visible;
+    scroll-padding-inline: 14px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  #services .services-showcase::-webkit-scrollbar {
+    height: 4px;
+  }
+
+  #services .services-showcase::-webkit-scrollbar-track {
+    background: rgba(238, 233, 224, 0.06);
+    border-radius: 999px;
+  }
+
+  #services .services-showcase::-webkit-scrollbar-thumb {
+    background: rgba(229, 132, 45, 0.54);
+    border-radius: 999px;
+  }
+
+  #services .services-secondary-grid {
+    display: contents;
+  }
+
+  #services .services-card {
+    flex: 0 0 min(84vw, 360px);
+    scroll-snap-align: start;
+  }
+
+  #services .services-card-featured {
+    flex-basis: min(88vw, 380px);
+  }
+}
+
+@media (max-width: 680px) {
+  .hero {
+    align-items: stretch;
+    gap: 18px;
+    padding:
+      clamp(104px, 13svh, 124px)
+      16px
+      max(88px, calc(env(safe-area-inset-bottom) + 78px));
+  }
+
+  .hero-copy {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .hero .eyebrow {
+    width: fit-content;
+    max-width: 100%;
+    margin-bottom: 16px;
+    padding: 8px 16px;
+    font-size: 0.62rem;
+    line-height: 1.35;
+  }
+
+  .hero h1 {
+    max-width: 12.8ch;
+    margin-bottom: 26px;
+    font-size: clamp(1.92rem, 9vw, 2.46rem);
+    line-height: 1.08;
+  }
+
+  .hero-actions {
+    display: block;
+    width: 100%;
+  }
+
+  .hero .btn-primary {
+    width: 100%;
+    min-height: 56px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero-panel {
+    position: relative;
+    z-index: 1;
+    width: calc(100% - 36px);
+    max-width: 340px;
+    margin: 2px auto 0;
+    padding: 16px;
+  }
+
+  .hero-panel span {
+    font-size: 0.68rem;
+    letter-spacing: 0.13em;
+  }
+
+  .hero-panel a {
+    font-size: clamp(1.22rem, 7vw, 1.58rem);
+  }
+
+  .hero-panel small {
+    font-size: 0.82rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .hero h1 {
+    font-size: clamp(1.82rem, 8.8vw, 2.24rem);
+  }
+
+  .hero-panel {
+    width: 100%;
+  }
+}
+
+/* Final mobile hero composition: cleaner, less crowded, full-screen. */
+@media (max-width: 680px) {
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    min-height: 100svh;
+    min-height: 100dvh;
+    padding:
+      clamp(96px, 13svh, 124px)
+      16px
+      max(112px, calc(env(safe-area-inset-bottom) + 96px));
+    background-position: 78% center;
+  }
+
+  .hero-copy {
+    width: 100%;
+    max-width: 420px;
+    transform: none;
+  }
+
+  .hero .eyebrow {
+    width: fit-content;
+    max-width: min(100%, 330px);
+    margin-bottom: 18px;
+    padding: 8px 14px;
+    font-size: 0.62rem;
+    line-height: 1.35;
+    white-space: normal;
+  }
+
+  .hero h1 {
+    max-width: 12.5ch;
+    margin-bottom: 28px;
+    font-size: clamp(2.08rem, 10.2vw, 2.82rem);
+    line-height: 1.04;
+  }
+
+  .hero-actions {
+    width: min(100%, 360px);
+    margin: 0;
+  }
+
+  .hero .btn-primary {
+    width: 100%;
+    min-height: 56px;
+  }
+
+  .hero-panel {
+    display: none;
+  }
+}
+
+@media (max-width: 380px) {
+  .hero h1 {
+    font-size: clamp(1.92rem, 9.4vw, 2.34rem);
+  }
+}
+
+@media (min-width: 981px) {
+  #services .services-showcase {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  #services .services-secondary-grid {
+    display: contents;
+  }
+
+  #services .services-card-featured {
+    min-height: 0;
+  }
+
+  #services .services-card-body {
+    display: block;
+  }
+
+  #services .services-card ul {
+    margin-top: 22px;
   }
 }
