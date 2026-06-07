@@ -7496,3 +7496,167 @@ textarea:focus {
     margin-top: 22px;
   }
 }
+
+@media (min-width: 1121px) {
+  .site-header {
+    padding: 10px clamp(18px, 4vw, 48px);
+    border-bottom-color: transparent;
+  }
+
+  .site-header::after {
+    display: none;
+  }
+
+  .header-inner {
+    min-height: 58px;
+  }
+
+  .brand-mark {
+    width: 142px;
+  }
+
+  .nav {
+    min-height: 44px;
+    padding: 4px;
+    border-radius: 12px;
+  }
+
+  .nav a {
+    min-height: 36px;
+    padding: 0 15px;
+  }
+
+  .header-call {
+    min-height: 46px;
+    border-radius: 12px;
+  }
+}
+
+/* Desktop hero layout lock: keeps the large logo, compact nav, and hero elements from colliding. */
+@media (min-width: 981px) {
+  .hero {
+    display: grid;
+    grid-template-columns:
+      minmax(clamp(24px, 4vw, 64px), 1fr)
+      minmax(0, 600px)
+      minmax(270px, 330px)
+      minmax(clamp(24px, 4vw, 64px), 1fr);
+    column-gap: clamp(28px, 4vw, 64px);
+    row-gap: 24px;
+    align-items: end;
+    min-height: min(760px, 86svh);
+    padding: clamp(138px, 13vw, 176px) 0 clamp(72px, 7vw, 98px);
+    background-position: 69% center;
+  }
+
+  .hero-copy {
+    grid-column: 2;
+    max-width: 600px;
+    padding: 0;
+    transform: none;
+  }
+
+  .hero .eyebrow {
+    margin-bottom: 18px;
+  }
+
+  .hero h1 {
+    max-width: 10.9ch;
+    margin-bottom: 26px;
+    font-size: clamp(2.85rem, 4vw, 4.12rem);
+    line-height: 1.04;
+  }
+
+  .hero-actions {
+    width: fit-content;
+    margin: 0;
+    padding: 0;
+  }
+
+  .hero .btn-primary {
+    width: auto;
+    min-width: 278px;
+  }
+
+  .hero-panel {
+    grid-column: 3;
+    align-self: end;
+    justify-self: end;
+    width: min(100%, 320px);
+    margin: 0;
+    transform: none;
+  }
+}
+
+@media (min-width: 981px) and (max-width: 1180px) {
+  .hero {
+    grid-template-columns:
+      minmax(clamp(18px, 4vw, 44px), 1fr)
+      minmax(0, 620px)
+      minmax(clamp(18px, 4vw, 44px), 1fr);
+    align-items: center;
+    min-height: 720px;
+    background-position: 74% center;
+  }
+
+  .hero-copy,
+  .hero-panel {
+    grid-column: 2;
+  }
+
+  .hero h1 {
+    max-width: 12ch;
+    font-size: clamp(2.65rem, 5vw, 3.7rem);
+  }
+
+  .hero-panel {
+    justify-self: start;
+    margin-top: 24px;
+  }
+}
+
+/* Final desktop header lock: balanced height with a large visible logo. */
+@media (min-width: 1121px) {
+  .site-header {
+    padding: 14px clamp(18px, 4vw, 48px);
+    border-bottom: 0;
+  }
+
+  .header-inner {
+    align-items: center;
+    min-height: 78px;
+    overflow: visible;
+  }
+
+  .brand {
+    flex: 0 0 142px;
+    align-self: center;
+    height: auto;
+    overflow: visible;
+  }
+
+  .brand-mark {
+    position: relative;
+    z-index: 3;
+    width: 142px;
+    margin: 0;
+    transform: none;
+  }
+
+  .nav {
+    min-height: 58px;
+    padding: 5px;
+    border-radius: 14px;
+  }
+
+  .nav a {
+    min-height: 48px;
+    padding: 0 16px;
+  }
+
+  .header-call {
+    min-height: 58px;
+    padding: 0 17px;
+    border-radius: 14px;
+  }
+}
